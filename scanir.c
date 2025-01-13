@@ -15,6 +15,10 @@ int read_pin = 7;       // 入力ピン番号(wiringpiの番号)
 int interval = 10;      // 継続時間判定の間隔(us)
 int max_wait = 40000;   // 最大継続時間(us)
 
+int scan(FILE *fp);
+int getTime(int status);
+int getInterval(double t1, double t2);
+
 void signalCallBackHandler(int sig)
 {
     readable = 0;
